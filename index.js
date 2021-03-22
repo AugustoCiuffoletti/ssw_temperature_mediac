@@ -1,7 +1,7 @@
 // Import stylesheets
 import "./style.css";
 
-var cityElems = document.getElementsByClassName("città");
+var cityElems = document.getElementsByClassName("citta");
 var t = 0;
 for (let elem of cityElems) {
   elem.onclick = () => display(elem.innerHTML);
