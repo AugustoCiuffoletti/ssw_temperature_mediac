@@ -31,10 +31,11 @@ function display(city) {
   doCity(city, data => {
     document.getElementById("risposta").innerHTML =
       "A " + city + " ci sono " + data.main.temp + " gradi";
-  });
+});
 }
 
 function media() {
+  t=0;
   for (let city of cityElems) {
     doCity(city.innerHTML, data => {
       t += data.main.temp / cityElems.length;
