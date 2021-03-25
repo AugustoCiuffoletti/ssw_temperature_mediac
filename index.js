@@ -6,7 +6,7 @@ var t = 0;
 for (let elem of cityElems) {
   elem.onclick = () => display(elem.innerHTML);
 }
-calcoloMedia.onclick = () => media();
+document.getElementById("calcoloMedia").onclick = () => media();
 
 function doCity(city, callback) {
   var request = new XMLHttpRequest(); // Costruzione dell'oggetto "request"
