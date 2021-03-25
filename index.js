@@ -7,7 +7,6 @@ const URL =
   apiKey +
   "&units=metric&q=";
 var cityElems = document.getElementsByClassName("citta");
-var t = 0;
 for (let elem of cityElems) {
   elem.onclick = () => display(elem.innerHTML);
 }
@@ -35,7 +34,7 @@ function display(city) {
 }
 
 function media() {
-  t=0;
+  let t = 0;
   for (let city of cityElems) {
     doCity(city.innerHTML, data => {
       t += data.main.temp / cityElems.length;
