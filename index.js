@@ -1,6 +1,11 @@
 // Import stylesheets
 import "./style.css";
 
+const apiKey = "9bd419b49d4261031516ad5fddac3439";
+const URL =
+  "https://api.openweathermap.org/data/2.5/weather?APPID=" +
+  apiKey +
+  "&units=metric&q=";
 var cityElems = document.getElementsByClassName("citta");
 var t = 0;
 for (let elem of cityElems) {
@@ -18,12 +23,7 @@ function doCity(city, callback) {
       document.getElementById("risposta").innerText = "Errore";
     }
   };
-  request.open(
-    "GET",
-    "https://api.openweathermap.org/data/2.5/weather?APPID=9bd419b49d4261031516ad5fddac3439&units=metric&q=" +
-      city,
-    true
-  );
+  request.open( "GET", URL + city, true );
   request.send();
 }
 
