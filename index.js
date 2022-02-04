@@ -6,7 +6,7 @@ const URL =
   "https://api.openweathermap.org/data/2.5/weather?APPID=" +
   apiKey +
   "&units=metric&q=";
-var cityElems = document.getElementsByClassName("citta");
+const cityElems = document.getElementsByClassName("citta");
 for (let elem of cityElems) {
   elem.onclick = () => display(elem.innerHTML);
 }
